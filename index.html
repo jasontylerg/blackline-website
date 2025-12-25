@@ -1,93 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blackline Risk</title>
-<style>
-    /* Reset & Base */
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
-    body { background-color: #f8f9fa; color: #212529; line-height: 1.6; }
-    a { text-decoration: none; color: inherit; }
-
-    /* Header */
-    header { display: flex; align-items: center; justify-content: space-between; padding: 20px 40px; background-color: #121212; color: #fff; }
-    header img { height: 50px; }
-    nav a { margin-left: 30px; font-weight: 500; color: #fff; transition: color 0.3s; }
-    nav a:hover { color: #00bcd4; }
-
-    /* Hero Section */
-    .hero { text-align: center; padding: 120px 20px 80px; background: linear-gradient(135deg, #121212 0%, #1f1f1f 100%); color: #fff; }
-    .hero h1 { font-size: 3rem; margin-bottom: 20px; }
-    .hero p { font-size: 1.2rem; max-width: 600px; margin: 0 auto 30px; }
-    .hero button { background-color: #00bcd4; border: none; padding: 15px 30px; font-size: 1rem; color: #fff; cursor: pointer; border-radius: 5px; transition: background 0.3s; }
-    .hero button:hover { background-color: #008fa3; }
-
-    /* About Section */
-    section { padding: 80px 20px; max-width: 1100px; margin: auto; }
-    h2 { font-size: 2rem; margin-bottom: 20px; color: #121212; text-align: center; }
-    .about p { max-width: 800px; margin: 0 auto; text-align: center; font-size: 1.1rem; }
-
-    /* Services / Offerings */
-    .services { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 50px; }
-    .service-card { background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 8px 20px rgba(0,0,0,0.05); width: 280px; transition: transform 0.3s, box-shadow 0.3s; }
-    .service-card:hover { transform: translateY(-5px); box-shadow: 0 12px 25px rgba(0,0,0,0.1); }
-    .service-card h3 { margin-bottom: 15px; color: #121212; }
-    .service-card p { font-size: 0.95rem; color: #555; }
-
-    /* Contact Section */
-    .contact { text-align: center; margin-top: 60px; }
-    .contact p { margin-bottom: 20px; font-size: 1.1rem; }
-    .contact a { color: #00bcd4; font-weight: 600; }
-
-    /* Footer */
-    footer { background-color: #121212; color: #fff; text-align: center; padding: 30px 20px; margin-top: 60px; font-size: 0.9rem; }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blackline Risk</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {margin:0; padding:0; box-sizing:border-box; font-family:'Inter', sans-serif;}
+    body {background-color:#f9f9f9; color:#111; line-height:1.6;}
+    header {background-color:#0a0a0a; color:white; padding:1rem 2rem; display:flex; align-items:center; justify-content:space-between;}
+    header img {height:50px;}
+    nav a {color:white; margin-left:1.5rem; text-decoration:none; font-weight:600; transition:0.2s;}
+    nav a:hover {color:#f39c12;}
+    .hero {padding:4rem 2rem; text-align:center;}
+    .hero h1 {font-size:2.5rem; margin-bottom:1rem;}
+    .hero p {font-size:1.2rem; color:#555;}
+    .services {display:flex; flex-wrap:wrap; justify-content:center; margin:4rem 0;}
+    .card {background:white; width:300px; margin:1rem; padding:2rem; border-radius:8px; box-shadow:0 4px 10px rgba(0,0,0,0.1); transition:0.3s;}
+    .card:hover {transform:translateY(-5px); box-shadow:0 6px 15px rgba(0,0,0,0.15);}
+    .card h3 {margin-bottom:1rem; color:#0a0a0a;}
+    .card p {color:#555;}
+    footer {background:#111; color:white; text-align:center; padding:2rem; margin-top:4rem;}
+    footer a {color:#f39c12; text-decoration:none;}
+  </style>
 </head>
 <body>
 
 <header>
-    <img src="logo.png" alt="Blackline Risk Logo">
-    <nav>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
-    </nav>
+  <img src="image/logo.png" alt="Blackline Risk Logo">
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 
 <section class="hero">
-    <h1>Blackline Risk</h1>
-    <p>Delivering executive-grade risk analysis and strategic insights for businesses operating in complex environments. We translate uncertainty into actionable intelligence.</p>
-    <button onclick="window.location.href='#contact'">Get In Touch</button>
-</section>
-
-<section id="about" class="about">
-    <h2>About Us</h2>
-    <p>Blackline Risk is a premier decision-grade risk advisory firm. Our team specializes in uncovering hidden vulnerabilities, providing actionable guidance, and empowering executives to make informed decisions. With expertise spanning industrial, municipal, and offshore operations, we focus on high-value, high-impact insights.</p>
+  <h1>Blackline Risk</h1>
+  <p>Decision-grade risk translation and executive risk advisory. We help operators identify, quantify, and mitigate high-stakes operational and regulatory exposures.</p>
 </section>
 
 <section id="services" class="services">
-    <div class="service-card">
-        <h3>Strategic Risk Analysis</h3>
-        <p>Deep dives into operational, regulatory, and environmental risks to protect your business and guide decision-making.</p>
-    </div>
-    <div class="service-card">
-        <h3>Compliance & Advisory</h3>
-        <p>Ensure adherence to complex regulations while optimizing processes for safety and efficiency.</p>
-    </div>
-    <div class="service-card">
-        <h3>Executive Reporting</h3>
-        <p>Clear, actionable dashboards and reports that give leadership the intelligence they need in real-time.</p>
-    </div>
+  <div class="card">
+    <h3>Risk Assessment</h3>
+    <p>Comprehensive analysis of operational, regulatory, and environmental risk with actionable insights.</p>
+  </div>
+  <div class="card">
+    <h3>Executive Advisory</h3>
+    <p>Strategic guidance for leadership to prioritize and mitigate risk before it escalates.</p>
+  </div>
+  <div class="card">
+    <h3>Heatmap Analytics</h3>
+    <p>High-level executive dashboards visualizing risk exposure without unnecessary clutter.</p>
+  </div>
 </section>
 
-<section id="contact" class="contact">
-    <h2>Contact Us</h2>
-    <p>Email us at <a href="mailto:jason@blacklinerisk.com">jason@blacklinerisk.com</a> or fill out the contact form below.</p>
-</section>
-
-<footer>
-    &copy; 2025 Blackline Risk. All rights reserved.
+<footer id="contact">
+  <p>Contact us: <a href="mailto:jason@blacklinerisk.com">jason@blacklinerisk.com</a></p>
+  <p>&copy; 2025 Blackline Risk. All rights reserved.</p>
 </footer>
 
 </body>
