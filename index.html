@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blackline Risk Dashboard</title>
+<style>
+body {
+    margin: 0;
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: #f4f4f4;
+    color: #1a1a1a;
+}
+header {
+    display: flex;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #0a0a0a;
+    color: #fff;
+}
+header .logo {
+    height: 50px;
+    margin-right: 20px;
+}
+header h1 {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+.hero {
+    position: relative;
+    text-align: center;
+    padding: 50px 20px;
+}
+.heatmap-container {
+    max-width: 700px;
+    margin: 0 auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 25px rgba(0,0,0,0.25);
+    position: relative;
+}
+.heatmap {
+    display: block;
+    width: 100%;
+}
+.heatmap-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-color: rgba(0,0,0,0.35);
+}
+.heatmap-overlay img {
+    max-width: 150px;
+}
+.summary {
+    margin-top: 20px;
+    font-size: 1.1rem;
+    color: #333;
+}
+.data-highlights {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+    background-color: #fff;
+}
+.highlight {
+    max-width: 250px;
+    text-align: center;
+    padding: 25px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    background-color: #fefefe;
+}
+.highlight h2 {
+    margin-bottom: 12px;
+    color: #0a0a0a;
+}
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: #0a0a0a;
+    color: #fff;
+}
+</style>
+</head>
+<body>
+<header>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAA..." alt="Blackline Risk Logo" class="logo">
+    <h1>Blackline Risk Executive Dashboard</h1>
+</header>
+
+<section class="hero">
+    <div class="heatmap-container">
+        <canvas id="heatmapCanvas" width="700" height="400" class="heatmap"></canvas>
+        <div class="heatmap-overlay">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAA..." alt="Blackline Risk Logo">
+        </div>
+    </div>
+    <p class="summary">Real-time visualization of operational, compliance, and client exposure risks.</p>
+</section>
+
+<section class="data-highlights">
+    <div class="highlight">
+        <h2>Operational Risk</h2>
+        <p>75% of operations monitored. Automated mitigation active.</p>
+    </div>
+    <div class="highlight">
+        <h2>Compliance Metrics</h2>
+        <p>92% of regulations tracked. Alerts issued for non-compliance.</p>
+    </div>
+    <div class="highlight">
+        <h2>Client Exposure</h2>
+        <p>12% of portfolios are high-risk. Strategic actions recommended.</p>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 Blackline Risk. All rights reserved.</p>
+</footer>
+
+<script>
+const canvas = document.getElementById('heatmapCanvas');
+const ctx = canvas.getContext('2d');
+const width = canvas.width;
+const height = canvas.height;
+
+function drawHeatmap() {
+    const gradient = ctx.createLinearGradient(0,0,width,height);
+    gradient.addColorStop(0, `rgb(${Math.floor(Math.random()*255)},0,0)`);
+    gradient.addColorStop(0.5, `rgb(255,${Math.floor(Math.random()*255)},0)`);
+    gradient.addColorStop(1, `rgb(0,0,${Math.floor(Math.random()*255)})`);
+    ctx.fillStyle = gradient;
+    ctx.fillRect(0, 0, width, height);
+}
+
+setInterval(drawHeatmap, 1500);
+drawHeatmap();
+</script>
+</body>
+</html>
