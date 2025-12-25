@@ -1,62 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blackline Risk</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    * {margin:0; padding:0; box-sizing:border-box; font-family:'Inter', sans-serif;}
-    body {background-color:#f9f9f9; color:#111; line-height:1.6;}
-    header {background-color:#0a0a0a; color:white; padding:1rem 2rem; display:flex; align-items:center; justify-content:space-between;}
-    header img {height:50px;}
-    nav a {color:white; margin-left:1.5rem; text-decoration:none; font-weight:600; transition:0.2s;}
-    nav a:hover {color:#f39c12;}
-    .hero {padding:4rem 2rem; text-align:center;}
-    .hero h1 {font-size:2.5rem; margin-bottom:1rem;}
-    .hero p {font-size:1.2rem; color:#555;}
-    .services {display:flex; flex-wrap:wrap; justify-content:center; margin:4rem 0;}
-    .card {background:white; width:300px; margin:1rem; padding:2rem; border-radius:8px; box-shadow:0 4px 10px rgba(0,0,0,0.1); transition:0.3s;}
-    .card:hover {transform:translateY(-5px); box-shadow:0 6px 15px rgba(0,0,0,0.15);}
-    .card h3 {margin-bottom:1rem; color:#0a0a0a;}
-    .card p {color:#555;}
-    footer {background:#111; color:white; text-align:center; padding:2rem; margin-top:4rem;}
-    footer a {color:#f39c12; text-decoration:none;}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blackline Risk</title>
+<style>
+    /* Reset */
+    * { margin:0; padding:0; box-sizing:border-box; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+
+    body { background-color:#f8f9fa; color:#212529; }
+
+    header { display:flex; justify-content:space-between; align-items:center; padding:20px 40px; background:#0d1117; }
+    header img { height:50px; }
+    header nav a { color:#ffffff; text-decoration:none; margin-left:30px; font-weight:500; transition:color 0.2s; }
+    header nav a:hover { color:#00d1ff; }
+
+    main { padding:40px; max-width:1200px; margin:auto; }
+
+    .hero { display:flex; flex-direction:column; align-items:center; text-align:center; margin-bottom:60px; }
+    .hero h1 { font-size:2.5rem; margin-bottom:20px; color:#0d1117; }
+    .hero p { font-size:1.2rem; color:#495057; max-width:700px; }
+
+    .ui-mockup { background:#ffffff; padding:40px; border-radius:12px; box-shadow:0 4px 16px rgba(0,0,0,0.1); margin-bottom:60px; }
+    .ui-mockup h2 { font-size:1.5rem; margin-bottom:20px; color:#0d1117; text-align:center; }
+    .mockup-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
+    .mockup-card { background:#f1f3f5; border-radius:8px; padding:20px; display:flex; flex-direction:column; align-items:center; justify-content:center; transition:transform 0.2s; }
+    .mockup-card:hover { transform:translateY(-5px); }
+    .mockup-card h3 { margin-bottom:10px; color:#0d1117; }
+    .mockup-card p { font-size:0.95rem; color:#495057; text-align:center; }
+
+    footer { text-align:center; padding:20px; background:#0d1117; color:#ffffff; margin-top:40px; font-size:0.9rem; }
+    footer a { color:#00d1ff; text-decoration:none; }
+</style>
 </head>
 <body>
 
 <header>
-  <img src="image/logo.png" alt="Blackline Risk Logo">
-  <nav>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
-  </nav>
+    <img src="images/logo.png" alt="Blackline Risk Logo">
+    <nav>
+        <a href="#overview">Overview</a>
+        <a href="#framework">Framework</a>
+        <a href="#contact">Contact</a>
+    </nav>
 </header>
 
-<section class="hero">
-  <h1>Blackline Risk</h1>
-  <p>Decision-grade risk translation and executive risk advisory. We help operators identify, quantify, and mitigate high-stakes operational and regulatory exposures.</p>
-</section>
+<main>
+    <section class="hero" id="overview">
+        <h1>Blackline Risk</h1>
+        <p>Delivering executive-grade risk analysis frameworks with precision. Streamlined insights, actionable outcomes, and tailored strategies for your enterprise risk management needs.</p>
+    </section>
 
-<section id="services" class="services">
-  <div class="card">
-    <h3>Risk Assessment</h3>
-    <p>Comprehensive analysis of operational, regulatory, and environmental risk with actionable insights.</p>
-  </div>
-  <div class="card">
-    <h3>Executive Advisory</h3>
-    <p>Strategic guidance for leadership to prioritize and mitigate risk before it escalates.</p>
-  </div>
-  <div class="card">
-    <h3>Heatmap Analytics</h3>
-    <p>High-level executive dashboards visualizing risk exposure without unnecessary clutter.</p>
-  </div>
-</section>
+    <section class="ui-mockup" id="framework">
+        <h2>AI Framework Overview</h2>
+        <div class="mockup-grid">
+            <div class="mockup-card">
+                <h3>Risk Assessment</h3>
+                <p>Dynamic evaluation of operational, regulatory, and environmental risks, visualized for decision-makers.</p>
+            </div>
+            <div class="mockup-card">
+                <h3>Scenario Simulation</h3>
+                <p>Run multiple scenarios and visualize potential impacts before committing resources.</p>
+            </div>
+            <div class="mockup-card">
+                <h3>Dashboard Insights</h3>
+                <p>Centralized, actionable insights delivered via intuitive dashboards tailored for executives.</p>
+            </div>
+            <div class="mockup-card">
+                <h3>Compliance Monitoring</h3>
+                <p>Track regulatory obligations and mitigation measures across all operational levels.</p>
+            </div>
+        </div>
+    </section>
 
-<footer id="contact">
-  <p>Contact us: <a href="mailto:jason@blacklinerisk.com">jason@blacklinerisk.com</a></p>
-  <p>&copy; 2025 Blackline Risk. All rights reserved.</p>
+    <section class="ui-mockup" id="contact">
+        <h2>Contact Blackline Risk</h2>
+        <p>Jason Stratton | Founder & Principal</p>
+        <p>Phone: 423-395-3151 | Email: jason@blacklinerisk.com</p>
+        <p>Visit our website: <a href="https://blacklinerisk.com">blacklinerisk.com</a></p>
+    </section>
+</main>
+
+<footer>
+    &copy; 2025 Blackline Risk. All rights reserved.
 </footer>
 
 </body>
